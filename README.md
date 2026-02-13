@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Century Music Empire"/>
+
+  <link rel="icon" sizes="192x192" href="https://www.wix.com/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="https://www.wix.com/favicon.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" href="https://www.wix.com/favicon.ico" type="image/x-icon"/>
+
+  <!-- Segmenter Polyfill -->
+  <script>
+    if (!window.Intl || !window.Intl.Segmenter) {
+      (function() {
+        var script = document.createElement('script');
+        script.src = 'https://static.parastorage.com/unpkg/@formatjs/intl-segmenter@11.7.10/polyfill.iife.js';
+        document.head.appendChild(script);
+      })();
+    }
+  </script>
+
+  <!-- Legacy Polyfills -->
+  <script nomodule="" src="https://static.parastorage.com/unpkg/core-js-bundle@3.2.1/minified.js"></script>
+  <script nomodule="" src="https://static.parastorage.com/unpkg/focus-within-polyfill@5.0.9/dist/focus-within-polyfill.js"></script>
+
+  <!-- Performance API Polyfills -->
+  <script>
+  (function () {
+    var noop = function noop() {};
+    if ("performance" in window === false) {
+      window.performance = {};
+    }
+    window.performance.mark = performance.mark || noop;
+    window.performance.measure = performance.measure || noop;
+    if ("now" in window.performance === false) {
+      var nowOffset = Date.now();
+      if (performance.timing && performance.timing.navigationStart) {
+        nowOffset = performance.timing.navigationStart;
+      }
+      window.performance.now = function now() {
+        return Date.now() - nowOffset;
+      };
+    }
+  })();
+  </script>
+
+  <!-- Globals Definitions -->
+  <script>
+    (function () {
+      var now = Date.now()
+      window.initialTimestamps = {
+        initialTimestamp: now,
+        initialRequestTimestamp: Math.round(performance.timeOrigin ? performance.timeOrigin : now - performance.now())
+      }
+
+      window.thunderboltTag = "libs-releases-GA-local"
+      window.thunderboltVersion = "1.16854.0"
+    })();
+  </script>
+
+  <!-- Essential Viewer Model -->
+  <script type="application/json" id="wix-essential-viewer-model">{"fleetConfig":{"fleetName":"wix-thunderbolt","type":"GA","code":0},"mode":{"qa":false,"enableTestApi":false,"debug":false}}</script>
+  <script>window.viewerModel = JSON.parse(document.getElementById('wix-essential-viewer-model').textContent)</script>
+
+  <script>
+    window.commonConfig = viewerModel.commonConfig
+  </script>
+
+  <!-- Remove Wix Banner Script -->
+  <script>
+    (function() {
+      // Hide Wix freemium banner on page load
+      window.addEventListener('load', function() {
+        var banner = document.querySelector('[data-testid="freemium-banner"], .ytGGBw, [class*="FreemiumBanner"]');
+        if (banner) {
+          banner.style.display = 'none';
+        }
+      });
+      
+      // Also remove via MutationObserver for dynamic content
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.addedNodes.length) {
+            var banner = document.querySelector('[data-testid="freemium-banner"], .ytGGBw, [class*="FreemiumBanner"]');
+            if (banner) {
+              banner.style.display = 'none';
+            }
+          }
+        });
+      });
+      
+      observer.observe(document.body, { childList: true, subtree: true });
+    })();
+  </script>
+
+  <!-- Initial CSS -->
+  <style data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/main.70d3646a.min.css">
+    @keyframes slide-horizontal-new{0%{transform:translateX(100%)}}
+    @keyframes slide-horizontal-old{80%{opacity:1}100%{opacity:0}}
+  </style>
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+
+  <meta http-equiv="X-Wix-Meta-Site-Id" content="5b54e366-d4bb-45ab-83b9-b46e09230a4d">
+  <meta http-equiv="X-Wix-Application-Instance-Id" content="a5087a08-5e49-4458-b11c-ca29d1815e30">
+  <meta http-equiv="X-Wix-Published-Version" content="59"/>
+
+  <title>Home | Century Music Empire</title>
+  <link rel="canonical" href="https://borexking256.wixsite.com/century-music-empire"/>
+  <meta property="og:title" content="Home | Century Music Empire"/>
+  <meta property="og:url" content="https://borexking256.wixsite.com/century-music-empire"/>
+  <meta property="og:site_name" content="Century Music Empire"/>
+  <meta property="og:type" content="website"/>
+  
+  <script type="application/ld+json">
+    {
+      "@context":"https://schema.org/",
+      "@type":"LocalBusiness",
+      "name":"Century Music Empire",
+      "url":"https://borexking256.wixsite.com/century-music-empire"
+    }
+  </script>
+  
+  <link rel="alternate" href="https://borexking256.wixsite.com/century-music-empire/blog-feed.xml" type="application/rss+xml" title="Century Music Empire - RSS"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Home | Century Music Empire"/>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <!-- Your existing page content would be rendered here -->
+  <!-- All Wix components and styling remain intact -->
+  
+  <script>
+    // Prevent Wix ads banner from showing
+    document.documentElement.style.setProperty('--wix-ads-height', '0px');
+  </script>
+</body>
+</html>
